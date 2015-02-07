@@ -1,5 +1,13 @@
 module.exports = function(grunt){
 
+
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-watch')
+  grunt.loadNpmTasks('grunt-browser-sync');
+
+
   grunt.initConfig({
     concat: {
       options: {
@@ -33,15 +41,37 @@ module.exports = function(grunt){
           ext: '.css'
         }]
       }
+    },
+    browserSync: {
+      app: {
+        bsFiles: {
+          src: [
+            'dist/**/*',
+            'index.html'
+          ]
+        },
+        options: {
+          server: {
+            baseDir: "./",
+            directory: true
+          },
+          watchTask: true
+        }
+      }
+    },
+    watch: {
+      js: {
+        files: ['src/js/**/*.js'],
+        tasks: ["concat", "uglify"]
+      },
+      sass: {
+        files: ['src/scss/**/*.scss'],
+        tasks: ['sass']
+      }
     }
   });
 
 
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-sass');
-
-
-  grunt.registerTask('default', ['concat', 'uglify', 'sass']);
+  grunt.registerTask('default', ['concat', 'uglify', 'sass', 'browserSync', 'watch']);
 
 }
