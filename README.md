@@ -1,7 +1,7 @@
 # Get started Grunt for CSS Nite LP39
 
 [CSS Nite LP39「Coder's High 2015：コーディングスタイルの理想と現実」](http://cssnite.jp/lp/lp39/)の、
-第4セッション「ビルドツールはじめの一歩」で紹介したGruntのサンプルです。  
+第4セッション「ビルドツールはじめの一歩」で紹介した`Grunt`を使ったタスク自動化のサンプルです。  
 ※ 本サンプルでは、SCSSのコンパイルに`Sass`を使っています。インストールされてない方は、予めインストールしてください  
 [インストール方法はこちら](#Sassのインストール方法)
 
@@ -10,7 +10,7 @@ Node.jsのインストールがお済みでない方は、予めインストー�
 
 ## サンプルの使い方
 
-- Step 1. 右下の`Download ZIP`ボタンからZIPファイルをダウンロード後、解凍
+- Step 1. このページの右下の`Download ZIP`ボタンからZIPファイルをダウンロード後、解凍
 - Step 2. `ターミナル`もしくは`コマンドプロンプト`をひらき、解凍したフォルダをドラッグ・アンド・ドロップしてEnter
 - Step 3. (今作業してるPCで)初めてGruntを使う方は、以下のコマンドを実行
  - 既に使ったことがある方は`Step 4`へ
@@ -57,4 +57,3 @@ sudo gem install sass
 
 ※ Windowsをお使いで、Rubyが入っていない方は[こちら](http://rubyinstaller.org/)からインストーラーがダウンロードできます。  
 ※ 詳しいインストール方法は[CSS Nite LP32のSou-Labさんのスライド](http://cssnite.jp/archives/post_2657.html)が参考になります。
-
